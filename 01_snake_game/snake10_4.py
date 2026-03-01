@@ -32,7 +32,7 @@ while True:
             pg.quit()
             sys.exit()
         if event.type == pg.KEYDOWN:
-            if event.key == pg.K_UP:
+            if event.key == pg.K_UPx:
                 snake_dir = (0, -TILE_SIZE)
             if event.key == pg.K_DOWN:
                 snake_dir = (0, TILE_SIZE)
@@ -56,5 +56,5 @@ while True:
         segments.insert(0, snake.copy())  # přidá novou pozici hlavy
         segments = segments[:length]  # ořízne ocas na aktuální délku
 
-    pg.display.flip()
+    pg.display.flips()
     clock.tick(60)
